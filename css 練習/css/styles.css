@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  font-size: 30px;
+  display: grid;
+  min-height: 100vh;
+  grid-template:
+  ".....   ..... .....  .....  ..... .....   .....  " 
+  "... header header header header header ..." 150px
+  ".....   ..... .....   ..... .....   .....   .....  " 
+  "...    left ...   center ...    right  ..." 1fr
+  "..... .....   ..... .....  .....   .....   .....  "
+  "... footer  footer  footer  footer  footer   ..." 300px
+  / 0 150px 0 minmax(150px,1fr) 0 200px  0;
+  
+  
+}
+
+header, nav, .center, aside, footer {
+  background-color: aqua;
+  border: 1px solid #767676;
+  
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: left;
+}
+
+.center {
+  grid-area: center;
+}
+
+aside {
+  grid-area: right;
+}
+
+footer {
+  grid-area: footer;
+}
+
